@@ -1,4 +1,5 @@
 <?php include 'sendmail.php'; ?>
+<?php include 'db_conn.php';  ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -34,7 +35,8 @@
               autocomplete required>  
           </div>
           <div>
-            <input type="email" name="email" class="text-box" placeholder="example@gmail.com" autocomplete required>
+            <input type="email" name="email" class="text-box" 
+                placeholder="example@gmail.com" autocomplete required>
           </div>
           <div>
             <textarea name="message" rows="5" placeholder="Your Message" required></textarea>    
@@ -52,58 +54,4 @@
   </body>
 </html>
       
-
-
-
-
-
-<!-- <?php
-        /* $nameErr = $emailErr = $phoneErr = "";
-        $name = $email =  $phone = $message = ""; */
-         
-        /* if ($_SERVER["REQUEST_METHOD"] == "POST") {
-          if (empty($_POST["name"])) {
-            $nameErr = "Name is required";
-          }else {
-            $name = test_input($_POST["name"]);
-              if(!preg_match("/^[a-zA-Z ]*$/", $name)) {                     //CHECK IF NAME CONTAINS ONLY LETTERS
-                $name_error = "Only Letters  and White Space Allowed";
-            }
-            } */
-            
-          /* if (empty($_POST["email"])) {
-              $emailErr = "Email is required";
-            }else {
-              $email = test_input($_POST["email"]);
-               
-               // check if e-mail address is well-formed
-              if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $emailErr = "Invalid email format"; 
-              }
-            } */
-          
-            
-          /* if (empty($_POST["message"])) {
-              $message = "";
-            }else {
-              $message = test_input($_POST["message"]);
-            } */
-            
-          /* if (empty($_POST["phone"])) {
-              $phoneErr = "Phone Number is required";
-            }else {
-              $phone = test_input($_POST["phone"]);
-              if(!preg_match("/^(\d[\s-]?)?[\(\[\s-]{0-2}?\d{3}[\s-]?\d{4}$/i", $phone)) {
-                $phone_error = "Invalid Phone Number";
-              }
-         
-            }
-         } */
-         
-          /* function test_input($data) {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-          } */
-      ?> -->
+      
